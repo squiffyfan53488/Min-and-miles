@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>I love you Min</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #faf6ef;
+    --ink: #2b2621;
+    --ink-soft: #6b6156;
+    --rose: #b56576;
+    --rose-deep: #8a4a58;
+    --line: rgba(43,38,33,0.14);
+    --gold: #a98a4e;
+  }
+  :root:not([data-theme="light"]) {
+    @media (prefers-color-scheme: dark) {
+      --paper: #211d19;
+      --ink: #f2ece1;
+      --ink-soft: #b6ab9c;
+      --rose: #d99aa8;
+      --rose-deep: #e3b3bd;
+      --line: rgba(242,236,225,0.16);
+      --gold: #cdb277;
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper: #211d19;
+    --ink: #f2ece1;
+    --ink-soft: #b6ab9c;
+    --rose: #d99aa8;
+    --rose-deep: #e3b3bd;
+    --line: rgba(242,236,225,0.16);
+    --gold: #cdb277;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Work Sans', system-ui, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6vh 6vw;
+    transition: background 0.4s ease, color 0.4s ease;
+  }
+
+  .page {
+    width: 100%;
+    max-width: 620px;
+    text-align: center;
+  }
+
+  .eyebrow {
+    font-size: 0.82rem;
+    letter-spacing: 0.04em;
+    color: var(--ink-soft);
+    margin: 0 0 0.6rem;
+  }
+
+  .names {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: clamp(2.2rem, 6vw, 3.2rem);
+    font-weight: 500;
+    margin: 0 0 2.4rem;
+    letter-spacing: 0.01em;
+  }
+
+  .names .and {
+    color: var(--rose);
+    font-style: italic;
+    padding: 0 0.35em;
+  }
+
+  .divider {
+    width: 48px;
+    height: 1px;
+    background: var(--line);
+    margin: 0 auto 2.4rem;
+  }
+
+  .countdown-label {
+    font-size: 0.95rem;
+    color: var(--ink-soft);
+    margin: 0 0 0.4rem;
+  }
+
+  .countdown-hero {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-weight: 600;
+    line-height: 1;
+    font-size: clamp(5rem, 22vw, 9.5rem);
+    color: var(--rose-deep);
+    margin: 0;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .countdown-hero .unit {
+    font-size: 0.16em;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 400;
+    color: var(--ink-soft);
+    display: block;
+    margin-top: 0.3rem;
+    letter-spacing: 0.02em;
+  }
+
+  .subrow {
+    display: flex;
+    justify-content: center;
+    gap: 2.6rem;
+    margin: 1.6rem 0 3rem;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .subrow div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .subrow .num {
+    font-size: 1.4rem;
+    font-weight: 500;
+    font-family: 'Cormorant Garamond', Georgia, serif;
+  }
+
+  .subrow .unit {
+    font-size: 0.72rem;
+    color: var(--ink-soft);
+    margin-top: 0.15rem;
+  }
+
+  .date-target {
+    font-size: 0.9rem;
+    color: var(--ink-soft);
+    margin: 0 0 3.4rem;
+  }
+
+  .distance-block {
+    padding: 1.8rem 0;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    margin-bottom: 3rem;
+  }
+
+  .distance-number {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: clamp(1.8rem, 4vw, 2.3rem);
+    font-weight: 500;
+  }
+
+  .distance-number .gold { color: var(--gold); }
+
+  .distance-caption {
+    font-size: 0.85rem;
+    color: var(--ink-soft);
+    margin-top: 0.4rem;
+  }
+
+  .note {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: clamp(1.15rem, 3vw, 1.4rem);
+    font-style: italic;
+    line-height: 1.65;
+    color: var(--ink);
+    max-width: 460px;
+    margin: 0 auto 2.6rem;
+  }
+
+  .signature {
+    font-size: 0.85rem;
+    color: var(--ink-soft);
+    letter-spacing: 0.02em;
+  }
+
+  @media (max-width: 420px) {
+    .subrow { gap: 1.5rem; }
+  }
+</style>
+</head>
+<body>
+
+<div class="page">
+  <p class="eyebrow">♥</p>
+  <h1 class="names">Miles<span class="and">&amp;</span>Min</h1>
+  <div class="divider"></div>
+
+  <div class="distance-block">
+    <p class="distance-number"><span class="gold" id="miles">–</span> miles apart, for now</p>
+  </div>
+
+  <p class="countdown-label">Until I see you again</p>
+  <p class="countdown-hero" id="days-hero">–<span class="unit">days</span></p>
+
+  <div class="subrow">
+    <div><span class="num" id="hrs">00</span><span class="unit">hours</span></div>
+    <div><span class="num" id="mins">00</span><span class="unit">min</span></div>
+    <div><span class="num" id="secs">00</span><span class="unit">seconds</span></div>
+  </div>
+
+  <p class="date-target">October 23</p>
+
+  <p class="signature">I love you, Min</p>
+</div>
+
+<script>
+  // Countdown target: October 23 of the current year (or next year if already passed), local time.
+  function getTarget() {
+    const now = new Date();
+    let year = now.getFullYear();
+    let target = new Date(year, 9, 23, 0, 0, 0); // month 9 = October
+    if (target.getTime() < now.getTime()) {
+      target = new Date(year + 1, 9, 23, 0, 0, 0);
+    }
+    return target;
+  }
+
+  function pad(n) { return String(n).padStart(2, '0'); }
+
+  function tick() {
+    const now = new Date();
+    const target = getTarget();
+    let diff = Math.max(0, target - now);
+
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+    const mins = Math.floor((diff / (1000 * 60)) % 60);
+    const secs = Math.floor((diff / 1000) % 60);
+
+    document.getElementById('days-hero').innerHTML = days + '<span class="unit">days</span>';
+    document.getElementById('hrs').textContent = pad(hours);
+    document.getElementById('mins').textContent = pad(mins);
+    document.getElementById('secs').textContent = pad(secs);
+  }
+
+  tick();
+  setInterval(tick, 1000);
+
+  // Distance calculation (Haversine), fixed two points in miles.
+  (function() {
+    const R = 3958.8; // miles
+    const pointA = { lat: 43.6408, lon: 7.0078 };   // starting point
+    const pointB = { lat: 42.4440, lon: -76.5019 }; // Ithaca, NY
+
+    function toRad(deg) { return deg * Math.PI / 180; }
+
+    const dLat = toRad(pointB.lat - pointA.lat);
+    const dLon = toRad(pointB.lon - pointA.lon);
+    const lat1 = toRad(pointA.lat);
+    const lat2 = toRad(pointB.lat);
+
+    const a = Math.sin(dLat / 2) ** 2 +
+              Math.cos(lat1) * Math.cos(lat2) * Math.sin(dLon / 2) ** 2;
+    const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+    const miles = Math.round(R * c);
+
+    document.getElementById('miles').textContent = miles.toLocaleString();
+  })();
+</script>
+
+</body>
+</html>
